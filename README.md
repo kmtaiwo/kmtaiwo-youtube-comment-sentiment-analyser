@@ -1,5 +1,7 @@
 # YouTube Comment Sentiment Analyser
 
+This project analyses sentiment in YouTube comments to understand audience reactions and engagement. It uses a machine learning pipeline (including Hugging Face transformers in the Streamlit app), an Airflow ETL flow for YouTube API data, and exploratory notebooks.
+
 Personal project extracted from the [SuperDataScience community course](https://github.com/SuperDataScience-Community-Projects/SDS-CP020-sentiment-analysis-using-youtube). This repository contains only the author’s notebooks, Airflow DAGs, and Streamlit app—not other contributors’ work from the community fork.
 
 ## What’s in this repo
@@ -64,26 +66,15 @@ The app calls the Airflow REST API on `http://localhost:8080` by default; start 
 
 Your **fork** of `SDS-CP020-sentiment-analysis-using-youtube` can stay as-is on GitHub. This repo is a **separate** repository ([kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser](https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser)) with only your files, so you do not need to delete or modify the community fork.
 
-### First-time push
+### Git remote
 
-If the GitHub repo is empty:
-
-```bash
-git init
-git add .
-git commit -m "Initial import: notebooks, Airflow DAGs, Streamlit app"
-git branch -M main
-git remote add origin https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser.git
-git push -u origin main
-```
-
-If `origin` already points at the wrong URL, fix it with:
+If you see `Repository not found`, ensure `origin` matches the repo name on GitHub:
 
 ```bash
 git remote set-url origin https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser.git
 ```
 
-If GitHub already has commits (for example an initial README), integrate first: `git pull origin main --rebase`, then `git push -u origin main`.
+If GitHub already has commits (for example an initial README), merge with: `git pull origin main --allow-unrelated-histories`, resolve any conflicts, then `git push -u origin main`.
 
 ## License
 
