@@ -73,9 +73,6 @@ streamlit run app/streamlit_app.py
 
 The app calls the Airflow REST API on `http://localhost:8080` by default; start Airflow first if you use that feature.
 
-## Relationship to the SDS fork
-
-Your **fork** of `SDS-CP020-sentiment-analysis-using-youtube` can stay as-is on GitHub. This repo is a **separate** repository ([kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser](https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser)) with only your files, so you do not need to delete or modify the community fork.
 
 ### Git remote
 
@@ -89,7 +86,7 @@ If GitHub already has commits (for example an initial README), merge with: `git 
 
 Tools Used
 
-- **Data extraction:** YouTube Data API v3, google-api-python-client
+- **Data extraction:** YouTube Data API v3, `google-api-python-client`
 - **NLP:** Hugging Face Transformers, scikit-learn
 - **Visualisation:** Streamlit, Plotly, Matplotlib, WordCloud
 - **Data handling:** Pandas, NumPy
