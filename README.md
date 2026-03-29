@@ -23,8 +23,8 @@ Personal project extracted from the [SuperDataScience community course](https://
 1. Clone this repository (your GitHub copy):
 
    ```bash
-   git clone https://github.com/kmtaiwo/youtube-comment-sentiment-analyser.git
-   cd youtube-comment-sentiment-analyser
+   git clone https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser.git
+   cd kmtaiwo-youtube-comment-sentiment-analyser
    ```
 
 2. Create and activate a virtual environment:
@@ -62,21 +62,28 @@ The app calls the Airflow REST API on `http://localhost:8080` by default; start 
 
 ## Relationship to the SDS fork
 
-Your **fork** of `SDS-CP020-sentiment-analysis-using-youtube` can stay as-is on GitHub. This repo is a **separate** repository (`youtube-comment-sentiment-analyser`) with only your files, so you do not need to delete or modify the community fork.
+Your **fork** of `SDS-CP020-sentiment-analysis-using-youtube` can stay as-is on GitHub. This repo is a **separate** repository ([kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser](https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser)) with only your files, so you do not need to delete or modify the community fork.
 
-### First-time push to `kmtaiwo/youtube-comment-sentiment-analyser`
+### First-time push
 
 If the GitHub repo is empty:
 
 ```bash
-cd youtube-comment-sentiment-analyser
 git init
 git add .
 git commit -m "Initial import: notebooks, Airflow DAGs, Streamlit app"
 git branch -M main
-git remote add origin https://github.com/kmtaiwo/youtube-comment-sentiment-analyser.git
+git remote add origin https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser.git
 git push -u origin main
 ```
+
+If `origin` already points at the wrong URL, fix it with:
+
+```bash
+git remote set-url origin https://github.com/kmtaiwo/kmtaiwo-youtube-comment-sentiment-analyser.git
+```
+
+If GitHub already has commits (for example an initial README), integrate first: `git pull origin main --rebase`, then `git push -u origin main`.
 
 ## License
 
